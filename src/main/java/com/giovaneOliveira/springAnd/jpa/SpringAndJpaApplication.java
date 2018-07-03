@@ -1,12 +1,31 @@
 package com.giovaneOliveira.springAnd.jpa;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+import com.giovaneOliveira.springAnd.jpa.domain.Categoria;
+import com.giovaneOliveira.springAnd.jpa.repositories.CategoriaRepository;
+
 @SpringBootApplication
-public class SpringAndJpaApplication {
+public class SpringAndJpaApplication implements CommandLineRunner {
+	
+	@Autowired
+	private CategoriaRepository categoriaRepository;
 
 	public static void main(String[] args) {
 		SpringApplication.run(SpringAndJpaApplication.class, args);
+	}
+
+	@Override
+	public void run(String... args) throws Exception {
+		Categoria cat1 = new Categoria(null,"Informática");
+		Categoria cat2 = new Categoria(null,"Escritório");
+		categoriaRepository.saveAll(Arrays.asList(cat1, cat2));
+		
 	}
 }
