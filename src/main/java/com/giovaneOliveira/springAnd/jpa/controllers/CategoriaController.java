@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.giovaneOliveira.springAnd.jpa.domain.Categoria;
+import com.giovaneOliveira.springAnd.jpa.model.Categoria;
 import com.giovaneOliveira.springAnd.jpa.services.CategoriaService;
 
 @RestController

@@ -3,7 +3,7 @@ package com.giovaneOliveira.springAnd.jpa.repositories;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import com.giovaneOliveira.springAnd.jpa.domain.Produto;
+import com.giovaneOliveira.springAnd.jpa.model.Produto;
 
 @Repository
 public interface ProdutoRepository extends JpaRepository<Produto, Long> {

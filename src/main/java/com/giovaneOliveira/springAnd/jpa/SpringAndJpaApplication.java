@@ -8,8 +8,8 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-import com.giovaneOliveira.springAnd.jpa.domain.Categoria;
-import com.giovaneOliveira.springAnd.jpa.domain.Produto;
+import com.giovaneOliveira.springAnd.jpa.model.Categoria;
+import com.giovaneOliveira.springAnd.jpa.model.Produto;
 import com.giovaneOliveira.springAnd.jpa.repositories.CategoriaRepository;
 import com.giovaneOliveira.springAnd.jpa.repositories.ProdutoRepository;
 
@@ -47,11 +47,6 @@ public class SpringAndJpaApplication implements CommandLineRunner {
 		categoriaRepository.saveAll(Arrays.asList(cat1, cat2));
 		
 		produtoRepository.saveAll(Arrays.asList(p1, p2, p3));
-		
-	 
-		
-
-		
-		
+			
 	}
 }

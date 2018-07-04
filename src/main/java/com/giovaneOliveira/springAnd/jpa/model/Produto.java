@@ -1,4 +1,4 @@
-package com.giovaneOliveira.springAnd.jpa.domain;
+package com.giovaneOliveira.springAnd.jpa.model;
 
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -14,6 +14,8 @@ import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 
 import org.hibernate.annotations.ManyToAny;
+
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 
 import lombok.Getter;
 import lombok.Setter;

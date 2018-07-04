@@ -1,4 +1,4 @@
-package com.giovaneOliveira.springAnd.jpa.domain;
+package com.giovaneOliveira.springAnd.jpa.model;
 
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -9,6 +9,9 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToMany;
+
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -22,6 +25,7 @@ public class Categoria implements Serializable{
 	
 	private String descricao;
 
+	@JsonIgnore
 	@ManyToMany(mappedBy ="categorias")
 	private List<Produto> produtos = new ArrayList<>();
 
