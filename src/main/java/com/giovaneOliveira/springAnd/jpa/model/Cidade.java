@@ -26,7 +26,7 @@ public class Cidade implements Serializable {
 	
 	public Cidade () {
 		
-	}
+	} 
 
 	public Cidade(Long id, String nome, Estado estado) {
 		super();
